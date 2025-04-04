@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "9e8a8985-dfd6-4e8f-b2f9-4f439623638e",
+		"name": "Auction API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8183202"
+	},
+	"item": [
+		{
+			"name": "/items/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Laptop Gamer\",\r\n  \"description\": \"Laptop con RTX 3060 y 16GB RAM\",\r\n  \"starting_price\": 800,\r\n  \"user_email\": \"test@test.com\",\r\n  \"minutes\": 30\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/items/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"items",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/item/{item_id}",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/items/544ce0d3-4593-4d08-8a26-c7a580635e07",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"items",
+						"544ce0d3-4593-4d08-8a26-c7a580635e07"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/items/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/items/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"items",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/bids/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"item_id\": \"544ce0d3-4593-4d08-8a26-c7a580635e07\",\r\n    \"user_email\": \"test1@test.com\",\r\n    \"amount\": 800\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/bids/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"bids",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/bids/top-bidders/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/bids/top-bidders/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"bids",
+						"top-bidders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/items/active",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/items/active/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"items",
+						"active",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

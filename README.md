@@ -173,6 +173,25 @@ curl -X GET "http://localhost:8000/bids/top-bidders/" -H "Content-Type: applicat
 ```
 
 ---
+## Pruebas automáticas con Pytest
+
+### Ejecutar pruebas
+
+```bash
+pytest tests/test_auction.py
+```
+
+### Casos cubiertos
+
+- Crear un ítem de subasta.
+- Realizar una puja válida.
+- Rechazar pujas que:
+  - Sean menores al precio inicial.
+  - Provengan del mismo creador de la subasta.
+- Consultar al ganador de una subasta (si existen pujas).
+
+
+---
 
 ## Toques Adicionales
 1. Validaciones para pujar a un subasta activa y con montos correctos.
